@@ -1,18 +1,16 @@
 var reverse = function (x) {
-  var flimit = Math.pow(2, 31) - 1;
-  var llimit = Math.pow(-2, 31);
+  var min = Math.pow(-2, 31);
+  var max = Math.pow(2, 31) - 1
+  var Num;
+  var Str = Math.abs(x).toString().split("").reverse().join("");
   if (x < 0) {
-    var value = Number(Math.abs(x).toString().split("").reverse().join(""));
-    console.log(value);
-    if (flimit - value > 0 && value) {
-      return value * -1;
-    }
+      Num = -1 * Number(Str);
   } else {
-    var value = Number(x.toString().split("").reverse().join(""));
-    console.log(value);
-    if (value < limit && value > Math(-2, 31)) {
-      return value;
-    }
+      Num = 1 * Number(Str);
   }
+  if (Num > min && Num < max) {
+      return Num;
+  } else
+      return 0;
 };
-console.log(reverse(1534236469));
+console.log(reverse(23432345));
